@@ -72,7 +72,7 @@ flowchart LR
 |---|---|
 | **Usefulness on G2 (30%)** | An everyday moment: you notice you need something while your hands are busy. One idea per screen, three options at most, nothing to read on the phone. Reorder covers the most common case in one sentence and one hold. |
 | **Read and write (25%)** | Reads: product options, wallet balance, cap left, order status. Writes: a **real TON testnet payment**, a cancel/refund, cap changes and revoke (from the phone or Telegram). Each action takes a short phrase plus a hold, with smart defaults (cheapest, top rated, fastest) and an AI "why" line. |
-| **Technical execution (20%)** | Works end to end in the simulator. 105 tests cover catalog search, intent parsing, ranking, caps, the 402 order flow, purchase routes, the Telegram bot, receipts, reorder, snap mapping, WAV encoding, and every screen and error line against the display budget. Every LLM step falls back to rules, so the demo never hard-fails on the model. |
+| **Technical execution (20%)** | Works end to end in the simulator and on TON testnet. 111 tests cover catalog search, intent parsing, ranking, caps, the 402 order flow, purchase routes, toncenter rate-limit retries, the Telegram bot, receipts, reorder, snap mapping, WAV encoding, and every screen and error line against the display budget. Every LLM step falls back to rules, so the demo never hard-fails on the model. |
 | **UX for display and voice (15%)** | Every screen is ≤ 8 lines × 46 chars, enforced by tests. It uses only glyphs the G2 font has (`·` `★`; no `✓` or `…`). Gestures are consistent: tap = next, swipe = browse, hold = buy, double tap = back or exit. Every failure is one readable line. |
 | **Business potential and safety (10%)** | Agentic commerce with hard limits: the key stays on the phone, caps are enforced in three places, the balance is the hard cap, purchases are confirmed with a deliberate hold, there is a 30 s cancel window with refunds, revoke sweeps funds back to the owner's Gram Wallet, and it is testnet only. The store side is x402-style, so any 402-speaking merchant could plug in. |
 
@@ -102,7 +102,7 @@ pnpm install
 cp .env.example .env      # every key is optional; see below
 pnpm dev                  # mock store :8788, API :8787, glasses app :5173
 pnpm sim                  # Even Hub simulator → localhost:5173
-pnpm test                 # 105 tests
+pnpm test                 # 111 tests
 ```
 
 **On the glasses:**
