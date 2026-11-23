@@ -1,0 +1,18 @@
+{
+  "name": "glancecart",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "dev:glasses": "pnpm --filter @glancecart/glasses dev",
+    "sim": "pnpm --filter @glancecart/glasses simulate",
+    "build": "pnpm -r build",
+    "test": "pnpm -r --if-present test",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "dev:api": "pnpm --filter @glancecart/api dev",
+    "dev:store": "pnpm --filter @glancecart/mock-store dev",
+    "dev": "pnpm -r --parallel --filter ./apps/* dev",
+    "set-origin": "node scripts/set-api-origin.mjs",
+    "tunnel": "cloudflared tunnel --url http://localhost:8787"
+  }
+}

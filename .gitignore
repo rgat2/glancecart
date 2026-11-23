@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.ehpk
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.vercel/
+.wrangler/
+apps/api/data/
+!apps/glasses/.env.production
+*.tgz
+
+# demo recordings (uploaded separately)
+media/*.mp4
