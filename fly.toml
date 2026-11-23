@@ -1,0 +1,28 @@
+# OPTIONAL paid hosting (not needed for the hackathon, see README "Hosting (free)").
+# Fly.io config for the GlanceCart API (+ internal mock store). Change `app` to a free name.
+app = "glancecart"
+primary_region = "fra"
+
+[build]
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+  STATE_FILE = "/data/state.json"
+  TONCENTER_ENDPOINT = "https://testnet.toncenter.com/api/v2/jsonRPC"
+  # PUBLIC_URL = "https://glancecart.fly.dev"   # set to your app URL
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  # Keep one machine running: the Telegram bot long-polls and receipts are timers.
+  auto_stop_machines = "off"
+  min_machines_running = 1
+
+[[mounts]]
+  source = "glancecart_data"
+  destination = "/data"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
