@@ -1,0 +1,33 @@
+// Error code → one glasses line. No side effects, so tests can import it.
+
+/** One readable line (≤ 46 chars) for each failure the glasses can show. */
+export const ERROR_LINES: Record<string, string> = {
+  offline: 'No connection. Check phone internet',
+  timeout: 'Server too slow. Try again',
+  no_speech: "Didn't catch that",
+  audio_too_short: 'Too short. Tap and speak',
+  audio_too_long: 'Too long. Keep it short',
+  stt_not_configured: 'Speech service not set up',
+  stt_failed: 'Speech service failed. Try again',
+  mic_unavailable: 'Microphone unavailable',
+  store_unavailable: 'Store is offline. Try later',
+  over_purchase_cap: 'Over your per-purchase cap',
+  over_daily_cap: 'Daily spending cap reached',
+  insufficient_balance: 'Not enough GRAM. Top up on phone',
+  revoked: 'Agent wallet is revoked',
+  out_of_stock: 'Sorry, that just sold out',
+  product_not_found: 'Item no longer available',
+  price_changed: 'Price changed. Try again',
+  quote_expired: 'Quote expired. Try again',
+  wrong_network: 'Refused: not a testnet payment',
+  amount_mismatch: 'Refused: amount mismatch',
+  store_wallet_not_configured: 'Store payments not set up',
+  payment_not_seen: 'Payment not confirmed. Check phone',
+  cancel_window_closed: 'Too late to cancel',
+  refund_failed: 'Refund failed. Try cancel again',
+  wallet_unavailable: 'Wallet offline. Check phone',
+  vision_not_configured: 'Photo search not set up',
+  no_product_in_photo: 'No product found in photo',
+  camera_cancelled: 'No photo taken',
+  camera_unavailable: 'Camera unavailable. Use phone panel',
+}

@@ -1,0 +1,29 @@
+{
+  "package_id": "com.glancecart.g2",
+  "edition": "202601",
+  "name": "GlanceCart",
+  "version": "0.1.0",
+  "min_app_version": "2.2.10",
+  "min_sdk_version": "0.0.16",
+  "entrypoint": "index.html",
+  "permissions": [
+    {
+      "name": "network",
+      "desc": "Talk to the GlanceCart server for speech-to-text, product search and TON testnet payments.",
+      "whitelist": [
+        "https://api.glancecart.example"
+      ]
+    },
+    {
+      "name": "g2-microphone",
+      "desc": "Hear your shopping request only while you tap or hold to talk."
+    },
+    {
+      "name": "camera",
+      "desc": "Snap-to-buy: take a photo of a product with your phone camera to compare prices online."
+    }
+  ],
+  "supported_languages": [
+    "en"
+  ]
+}
