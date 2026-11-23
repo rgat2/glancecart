@@ -1,0 +1,39 @@
+# Publishes the static funding page (apps/fund) to GitHub Pages for free.
+# Enable once: repo Settings → Pages → Source: GitHub Actions.
+# URL: https://<owner>.github.io/<repo>/  (TON Connect manifest is emitted alongside)
+name: Fund page → GitHub Pages
+on:
+  push:
+    branches: [main]
+    paths: ['apps/fund/**', 'pnpm-lock.yaml', '.github/workflows/fund-pages.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --filter "@glancecart/fund..."
+      - run: pnpm --filter @glancecart/fund exec vite build
+        env:
+          FUND_PUBLIC_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/fund/dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

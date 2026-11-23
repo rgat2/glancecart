@@ -1,0 +1,14 @@
+:root { color-scheme: dark; }
+body { margin: 0; background: #232323; color: #E5E5E5; font: 16px/1.45 -apple-system, BlinkMacSystemFont, 'Helvetica Neue', system-ui, sans-serif; }
+.panel { max-width: 520px; margin: 0 auto; padding: 24px 16px; display: flex; flex-direction: column; gap: 16px; }
+h1 { font-size: 20px; margin: 0; }
+.card { background: #2E2E2E; border: 1px solid #3E3E3E; border-radius: 12px; padding: 16px; display: grid; gap: 12px; }
+label { display: grid; gap: 6px; font-size: 14px; color: #A7A7A7; }
+input { padding: 10px 12px; border-radius: 10px; border: 1px solid #3E3E3E; background: #232323; color: #E5E5E5; font-size: 15px; font-family: ui-monospace, Menlo, Consolas, monospace; }
+button { padding: 12px 16px; border-radius: 10px; border: 0; background: #3CFA44; color: #111; font-weight: 600; font-size: 16px; }
+button:disabled { opacity: 0.4; }
+.muted { color: #A7A7A7; margin: 0; }
+.small { font-size: 13px; }
+.ok { color: #3CFA44; margin: 0; }
+.err { color: #FF453A; margin: 0; }
+a { color: #3CFA44; }

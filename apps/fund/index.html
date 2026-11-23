@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fund GlanceCart</title>
+  </head>
+  <body>
+    <main class="panel">
+      <h1>Fund your GlanceCart agent wallet</h1>
+      <p class="muted">TON testnet · test GRAM only. Connect your Gram Wallet (or any TON wallet set to testnet) and send a small budget to the agent wallet on your glasses. The wallet balance is the hard spending limit.</p>
+      <section class="card">
+        <label>Agent wallet
+          <input id="to" placeholder="0Q… agent wallet address" autocomplete="off" spellcheck="false" />
+        </label>
+        <label>Amount (test GRAM)
+          <input id="amount" type="number" step="0.1" min="0.1" max="5" value="1" />
+        </label>
+        <div id="connect"></div>
+        <button id="send" disabled>Send test GRAM</button>
+        <p id="msg" class="muted"></p>
+      </section>
+      <p class="muted small">Need test GRAM? <a href="https://t.me/testgiver_ton_bot" target="_blank" rel="noopener">@testgiver_ton_bot</a> · You can get the money back any time with "Revoke &amp; return funds" in the glasses app.</p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
