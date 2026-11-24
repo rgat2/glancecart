@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/logo-wordmark.png" alt="GlanceCart: say it, see it, hold to buy" width="600"></p>
+
 # GlanceCart
 
 **Say it, see it, hold to buy.** Voice shopping for Even Realities G2. Tell your glasses what you need, glance at three options, and hold the touchpad or R1 ring to pay from a spending-capped agent wallet on TON, funded from your Gram Wallet.
