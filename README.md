@@ -5,6 +5,9 @@
 - **Hackathon:** Heads Up: Even Realities Hackathon (TVM Ventures × Daos Hub), Nov 23–29, 2026
 - **Main track:** 02 · Crypto & DeFi (Gram Wallet). **Second track:** 01 · Messaging (Telegram bot). Also entering **Best Telegram integration**.
 - **Network:** TON **testnet** only, paid in test GRAM. No mainnet keys anywhere.
+- **Demo video (2:44):** https://youtu.be/xGL3jLnFpb8
+- **Packaged app:** [`glancecart.ehpk` on release v0.1.0](https://github.com/rgat2/glancecart/releases/tag/v0.1.0)
+- **On-chain proof:** [agent wallet on TON testnet](https://testnet.tonviewer.com/0QAUwEtUl4OdPveQOPDRFLYRBd7M-Q_HOAFqhCxf7Dc15gtv)
 
 ## 30-second pitch
 

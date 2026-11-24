@@ -15,8 +15,8 @@ Say it, see it, hold to buy: voice shopping on Even G2, paid from a capped TON a
 
 ## Links
 - Repo: https://github.com/rgat2/glancecart
-- Demo video (≤ 3 min): ✏️ `<YouTube/Drive link>` (file: `media/glancecart-demo.mp4`, not in git)
-- Packaged build: `glancecart.ehpk`, attached to the GitHub release (build with `pnpm --filter @glancecart/glasses pack:ehpk`)
+- Demo video (≤ 3 min): https://youtu.be/xGL3jLnFpb8
+- Packaged build: `glancecart.ehpk` on release v0.1.0: https://github.com/rgat2/glancecart/releases/tag/v0.1.0
 - Funding page: https://rgat2.github.io/glancecart/ (after enabling Pages → GitHub Actions)
 - On-chain proof (TON testnet agent wallet): https://testnet.tonviewer.com/0QAUwEtUl4OdPveQOPDRFLYRBd7M-Q_HOAFqhCxf7Dc15gtv
 
@@ -68,8 +68,8 @@ You fund the agent wallet from **Gram Wallet** through TON Connect (testnet enfo
 - **No secrets in the repo or the app:** provider keys live on the server, and `.env` is gitignored
 - **Privacy:** the mic is on only between taps; no always-on listening
 - **Public repo** with setup instructions: https://github.com/rgat2/glancecart
-- **Demo video** (≤ 3 min, recorded in the Even Hub simulator plus Telegram on a phone): ✏️ link
-- **Packaged build:** `glancecart.ehpk` on the GitHub release
+- **Demo video** (≤ 3 min, recorded in the Even Hub simulator plus Telegram on a phone): https://youtu.be/xGL3jLnFpb8
+- **Packaged build:** [`glancecart.ehpk` on release v0.1.0](https://github.com/rgat2/glancecart/releases/tag/v0.1.0)
 - **What existed before Nov 23:** the official `evenhub-templates/asr` scaffold (MIT) and open-source libraries; all app code was written during the build week (see README)
 - **Feature requests (5):** secure key storage, open external URL, simulator parity, an OS confirm primitive for payments, and Gram Wallet testnet support (see `API_FEEDBACK.md`)
 ````
